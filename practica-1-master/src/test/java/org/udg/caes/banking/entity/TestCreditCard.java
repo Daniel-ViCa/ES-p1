@@ -16,4 +16,10 @@ public class TestCreditCard {   //Entrem dins la classe de la funcio
         cc.credit(100);                         //Act (Executem - actuem el metode)
         assertEquals(100, cc.getCredit());      //Assert (verifiquem els resultats)
     }
+    @Test
+    void testMaxCredit() {
+        CreditCard cc = new CreditCard("test");
+        cc.maxCredit = 150;
+        assertEquals(150, cc.getMaxCredit());
+    }
 }
